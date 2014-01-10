@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="propertyConfigurer"
+          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location" value="/conf/conf.properties" />
+    </bean>
+
+    <context:component-scan base-package="by.bsu.spothot.vk"/>
+
+    <bean class="by.bsu.spothot.vk.api.ApiRequestBuilder">
+        <property name="host" value="${vk.api.host}"/>
+        <property name="scheme" value="${vk.api.scheme}"/>
+        <property name="accessToken" value="${access-token}"/>
+    </bean>
+
+    <bean class="by.bsu.spothot.vk.api.JsonContentRetriever">
+    </bean>
+
+    <bean class="by.bsu.spothot.vk.parser.SongExtractor"></bean>
+
+    <bean class="by.bsu.spothot.vk.api.VKApiHelper"/>
+
+</beans>
