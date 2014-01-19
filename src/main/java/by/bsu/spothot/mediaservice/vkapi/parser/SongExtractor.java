@@ -1,4 +1,4 @@
-package by.bsu.spothot.vk.parser;
+package by.bsu.spothot.mediaservice.vkapi.parser;
 
 import by.bsu.spothot.bean.Song;
 import org.apache.log4j.Logger;
@@ -7,7 +7,6 @@ import org.codehaus.jackson.JsonParser;
 import org.codehaus.jackson.JsonToken;
 
 import java.io.IOException;
-import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.List;
 

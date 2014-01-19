@@ -9,19 +9,19 @@
         <property name="location" value="/conf/conf.properties" />
     </bean>
 
-    <context:component-scan base-package="by.bsu.spothot.vk"/>
+    <context:component-scan base-package="by.bsu.spothot.mediaservice.vkapi"/>
 
-    <bean class="by.bsu.spothot.vk.api.ApiRequestBuilder">
+    <bean class="by.bsu.spothot.mediaservice.vkapi.jsonprocess.VKApiRequestBuilder">
         <property name="host" value="${vk.api.host}"/>
         <property name="scheme" value="${vk.api.scheme}"/>
         <property name="accessToken" value="${access-token}"/>
     </bean>
 
-    <bean class="by.bsu.spothot.vk.api.JsonContentRetriever">
+    <bean class="by.bsu.spothot.mediaservice.vkapi.jsonprocess.JsonContentRetriever">
     </bean>
 
-    <bean class="by.bsu.spothot.vk.parser.SongExtractor"></bean>
+    <bean class="by.bsu.spothot.mediaservice.vkapi.parser.SongExtractor"></bean>
 
-    <bean class="by.bsu.spothot.vk.api.VKApiHelper"/>
+    <bean class="by.bsu.spothot.mediaservice.vkapi.main.VKApiHelper"/>
 
 </beans>

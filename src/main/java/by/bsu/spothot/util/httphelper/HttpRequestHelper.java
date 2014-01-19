@@ -1,4 +1,4 @@
-package by.bsu.spothot.vk.api;
+package by.bsu.spothot.util.httphelper;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.http.HttpException;

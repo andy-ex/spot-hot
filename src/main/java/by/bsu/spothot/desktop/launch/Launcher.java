@@ -1,4 +1,4 @@
-package by.bsu.spothot.main;
+package by.bsu.spothot.desktop.launch;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -11,10 +11,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.ResourceBundle;
 
-public class MainApp extends Application
+public class Launcher extends Application
 {
 
-    private static final Logger log = LoggerFactory.getLogger(MainApp.class);
+    private static final Logger log = LoggerFactory.getLogger(Launcher.class);
 
     public static void main(String[] args) throws Exception
     {

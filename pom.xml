@@ -28,7 +28,7 @@
                 <version>1.3</version>
                 <configuration>
 
-                    <mainClass>by.bsu.spothot.main.MainApp</mainClass>
+                    <mainClass>by.bsu.spothot.desktop.launch.Launcher</mainClass>
 
                     <!-- only required if signing the jar file -->
                     <keyStoreAlias>example-user</keyStoreAlias>

@@ -1,8 +1,9 @@
-package by.bsu.spothot.vk.api;
+package by.bsu.spothot.mediaservice.vkapi.main;
 
 import by.bsu.spothot.bean.Song;
-import by.bsu.spothot.util.UrlContentSaver;
-import by.bsu.spothot.vk.parser.SongExtractor;
+import by.bsu.spothot.mediaservice.vkapi.parser.SongExtractor;
+import by.bsu.spothot.mediaservice.vkapi.jsonprocess.JsonContentRetriever;
+import by.bsu.spothot.util.saver.UrlContentSaver;
 import javafx.scene.Scene;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.layout.HBox;

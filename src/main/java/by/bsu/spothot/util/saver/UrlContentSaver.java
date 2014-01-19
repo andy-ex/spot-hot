@@ -1,4 +1,4 @@
-package by.bsu.spothot.util;
+package by.bsu.spothot.util.saver;
 
 import org.apache.commons.io.IOUtils;
 

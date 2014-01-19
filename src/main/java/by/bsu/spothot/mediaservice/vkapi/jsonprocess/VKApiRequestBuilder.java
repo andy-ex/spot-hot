@@ -1,4 +1,4 @@
-package by.bsu.spothot.vk.api;
+package by.bsu.spothot.mediaservice.vkapi.jsonprocess;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.client.utils.URIUtils;
@@ -14,7 +14,7 @@ import java.util.List;
  * Created by Dmitry on 1/6/14.
  */
 
-public class ApiRequestBuilder
+public class VKApiRequestBuilder
 {
     private String scheme;
     private String host;

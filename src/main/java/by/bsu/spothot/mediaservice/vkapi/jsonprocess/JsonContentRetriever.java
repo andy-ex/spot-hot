@@ -1,8 +1,8 @@
-package by.bsu.spothot.vk.api;
+package by.bsu.spothot.mediaservice.vkapi.jsonprocess;
 
+import by.bsu.spothot.util.httphelper.HttpRequestHelper;
 import org.apache.http.HttpException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.net.URI;
@@ -14,7 +14,7 @@ import java.net.URISyntaxException;
 public class JsonContentRetriever
 {
     @Autowired
-    ApiRequestBuilder requestBuilder;
+    VKApiRequestBuilder requestBuilder;
 
     public String retrievePosts(String domain, int count) throws URISyntaxException, IOException, HttpException
     {

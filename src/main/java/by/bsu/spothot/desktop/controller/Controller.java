@@ -1,13 +1,12 @@
-package by.bsu.spothot.controller;
+package by.bsu.spothot.desktop.controller;
 
-import by.bsu.spothot.vk.api.VKApiHelper;
+import by.bsu.spothot.mediaservice.vkapi.main.VKApiHelper;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import javax.swing.*;
 import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
