@@ -51,4 +51,9 @@ public class Song
     public void setUrl(String url) {
         this.url = url;
     }
+
+    @Override
+    public String toString() {
+        return getArtist() + " - " + getTitle() + ".mp3";
+    }
 }

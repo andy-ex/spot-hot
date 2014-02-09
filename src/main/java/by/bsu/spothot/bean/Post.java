@@ -1,5 +1,6 @@
 package by.bsu.spothot.bean;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -7,12 +8,39 @@ import java.util.List;
  */
 public class Post
 {
+    private Integer id;
+    private String domain;
+    private Date date;
     private String text;
     private List<Song> songs;
     private List<Video> videos;
     private List<Picture> pictures;
 
     private int likesCount;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getDomain() {
+        return domain;
+    }
+
+    public void setDomain(String domain) {
+        this.domain = domain;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
 
     public String getText()
     {
@@ -62,5 +90,19 @@ public class Post
     public void setLikesCount(int likesCount)
     {
         this.likesCount = likesCount;
+    }
+
+    @Override
+    public String toString() {
+        return "Post{" +
+                "id=" + id +
+                ", domain='" + domain + '\'' + '\n' +
+                ", date='" + date + '\'' + '\n' +
+                ", text='" + text + '\'' + '\n' +
+                ", songs=" + songs + '\n' +
+                ", videos=" + videos + '\n' +
+                ", pictures=" + pictures + '\n' +
+                ", likesCount=" + likesCount + '\n' +
+                '}';
     }
 }

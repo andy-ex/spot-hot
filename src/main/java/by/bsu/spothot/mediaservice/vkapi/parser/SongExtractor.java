@@ -5,6 +5,7 @@ import org.apache.log4j.Logger;
 import org.codehaus.jackson.JsonFactory;
 import org.codehaus.jackson.JsonParser;
 import org.codehaus.jackson.JsonToken;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -13,6 +14,7 @@ import java.util.List;
 /**
  * Created by Dmitry on 1/2/14.
  */
+@Component
 public class SongExtractor
 {
     private static final Logger log = Logger.getLogger(SongExtractor.class);
@@ -50,7 +52,7 @@ public class SongExtractor
         }
     }
 
-    private Song extractSong(JsonParser parser) throws IOException
+    public static Song extractSong(JsonParser parser) throws IOException
     {
         Song song = new Song();
 

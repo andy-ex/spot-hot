@@ -26,7 +26,7 @@ public class HttpRequestHelper
         log.info("Sending http request: " + uri);
 
         HttpResponse response = client.execute(getRequest);
-        getRequest.abort();
+        //getRequest.abort();
 
         return IOUtils.toString(response.getEntity().getContent());
     }
