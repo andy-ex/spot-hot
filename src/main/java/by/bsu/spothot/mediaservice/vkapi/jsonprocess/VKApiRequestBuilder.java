@@ -1,17 +1,14 @@
 package by.bsu.spothot.mediaservice.vkapi.jsonprocess;
 
-import by.bsu.spothot.mediaservice.vkapi.parser.PostExtractor;
-import com.sun.org.glassfish.gmbal.NameValue;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.utils.URIUtils;
-import org.apache.http.client.utils.URLEncodedUtils;
-import org.apache.http.message.BasicNameValuePair;
-import org.springframework.stereotype.Component;
-
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.apache.http.NameValuePair;
+import org.apache.http.client.utils.URIUtils;
+import org.apache.http.client.utils.URLEncodedUtils;
+import org.apache.http.message.BasicNameValuePair;
 
 /**
  * Created by Dmitry on 1/6/14.

@@ -25,6 +25,9 @@ public class UrlContentSaver
             URL source = new URL(url);
             URLConnection connection = source.openConnection();
 
+            fileName = fileName.replace("\\", " ");
+            fileName = fileName.replace("/", " ");
+
             File destDir = new File(destination);
             File destFile = new File(destination + File.separator + fileName);
 

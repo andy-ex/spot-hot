@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.List;
 
 /**
  * Created by Dmitry on 2/2/14.
@@ -31,9 +32,18 @@ public class GetPostByIdOperation
         try
         {
             String content = contentRetriever.retrievePostsByIds(postId);
-            return postExtractor.extractPosts(content).get(0);
+            List<Post> posts = postExtractor.extractPosts(content);
+            return posts.isEmpty() ? null : posts.get(0);
         }
-        catch (URISyntaxException | IOException | HttpException e)
+        catch (URISyntaxException e)
+        {
+            e.printStackTrace();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+        catch (HttpException e)
         {
             e.printStackTrace();
         }
