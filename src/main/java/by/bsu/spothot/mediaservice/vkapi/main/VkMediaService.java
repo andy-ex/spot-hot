@@ -2,6 +2,7 @@ package by.bsu.spothot.mediaservice.vkapi.main;
 
 import by.bsu.spothot.bean.Post;
 import by.bsu.spothot.bean.Song;
+import by.bsu.spothot.mediaservice.configuration.MusicDomainMapping;
 import by.bsu.spothot.mediaservice.vkapi.main.operation.GetMostLikedPostOperation;
 import by.bsu.spothot.mediaservice.vkapi.main.operation.GetPostByIdOperation;
 import by.bsu.spothot.mediaservice.vkapi.parser.PostExtractor;
@@ -35,6 +36,9 @@ public class VkMediaService
     @Autowired
     GetPostByIdOperation getPostByIdOperation;
 
+    @Autowired
+    private MusicDomainMapping domainMapping;
+
     public Post getMostLikedPost(String genre, int postCount)
     {
         return getMostLikedPostOperation.getMostLikedPost(getAppropriateDomain(genre), postCount);
@@ -47,7 +51,7 @@ public class VkMediaService
 
     private String getAppropriateDomain(String genre)
     {
-        return "indie_music";
+        return domainMapping.getDomainForKey(genre);
     }
 
 

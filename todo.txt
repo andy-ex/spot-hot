@@ -1,0 +1,2 @@
+Fix classpath: mvn com.zenjava:javafx-maven-plugin:2.0:fix-classpath
+Reason: http://zenjava.com/javafx/maven/fix-classpath.html

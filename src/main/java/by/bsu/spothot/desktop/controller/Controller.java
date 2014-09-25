@@ -6,6 +6,8 @@ import by.bsu.spothot.desktop.ui.Dialogs;
 import by.bsu.spothot.desktop.util.ComboBoxUtils;
 import by.bsu.spothot.desktop.util.SongSaver;
 import by.bsu.spothot.mediaservice.SharedMediaService;
+import by.bsu.spothot.mediaservice.configuration.MusicDomainMapping;
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
@@ -43,6 +45,10 @@ public class Controller implements Initializable
         destinationPost.setText(defaultValue);
 
         context = new ClassPathXmlApplicationContext("conf/app-context.xml");
+
+        MusicDomainMapping mapping = context.getBean(MusicDomainMapping.class);
+
+        genreBox.setItems(FXCollections.observableArrayList(mapping.getKeys()));
     }
 
     public void downloadMostLiked()

@@ -2,7 +2,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
 
     <context:component-scan base-package="by.bsu.spothot.mediaservice"/>
@@ -15,6 +15,15 @@
     <bean class="by.bsu.spothot.mediaservice.vkapi.jsonprocess.VKApiRequestBuilder">
         <property name="host" value="${vk.api.host}"/>
         <property name="scheme" value="${vk.api.scheme}"/>
+    </bean>
+
+    <bean class="by.bsu.spothot.mediaservice.configuration.MusicDomainMapping">
+        <property name="mapping">
+            <map>
+                <entry key="Indie" value="indie_music"/>
+                <entry key="More Music" value="music_more"/>
+            </map>
+        </property>
     </bean>
 
 </beans>
